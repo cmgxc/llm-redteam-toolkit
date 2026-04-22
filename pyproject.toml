@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-redteam-toolkit"
+version = "0.1.0"
+description = "Security testing framework for LLM applications (OWASP LLM Top 10)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Chris Ghiold" }]
+dependencies = [
+    "pyyaml>=6.0",
+    "requests>=2.31",
+    "python-dotenv>=1.0",
+    "rich>=13.7",
+    "click>=8.1",
+    "openai>=1.12",
+]
+
+[project.scripts]
+llm-redteam = "llm_redteam.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+llm_redteam = ["payloads/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
