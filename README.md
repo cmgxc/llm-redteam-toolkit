@@ -1,5 +1,9 @@
 # LLM Red Team Toolkit
 
+[![tests](https://github.com/cmgxc/llm-redteam-toolkit/actions/workflows/tests.yml/badge.svg)](https://github.com/cmgxc/llm-redteam-toolkit/actions/workflows/tests.yml)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![OWASP LLM Top 10](https://img.shields.io/badge/OWASP-LLM%20Top%2010-0073aa.svg)](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
+
 A security testing framework for LLM-based applications. Evaluates targets against the **OWASP Top 10 for LLMs** using a library of curated attack payloads, an LLM-based judge for scoring, and structured reports suitable for handing to a security team.
 
 > **Status:** v0.1 — research/learning project. Not a replacement for a manual assessment by a qualified red team.
@@ -65,7 +69,7 @@ python -m llm_redteam.cli run \
 cat reports/sample-run/report.md
 ```
 
-See [`examples/sample_run.md`](examples/sample_run.md) for expected output.
+See [`examples/sample_run.md`](examples/sample_run.md) for expected output, and [`examples/sample_report/report.md`](examples/sample_report/report.md) for a real report generated against the bundled vulnerable target.
 
 ## Attack catalog (v0.1)
 
